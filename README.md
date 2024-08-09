@@ -16,7 +16,7 @@ A curated list for **Efficient Large Language Models**
   - [Survey](survey.md)
   - [Leaderboard](leaderboard.md)
 
-### Please check out all the papers by selecting the sub-area you're interested in. On this page, we're showing papers released in the past 60 days.
+### Please check out all the papers by selecting the sub-area you're interested in. On this main page, we're showing papers released in the past 90 days.
 
 #### 🚀 Updates
 * May 29, 2024: We've had this awesome list for a year now :smiling_face_with_three_hearts:! It's grown pretty long, so we're reorganizing it and would divide the list by their specific areas into different readme.
@@ -25,14 +25,34 @@ A curated list for **Efficient Large Language Models**
 * July 11, 2023:
 In light of the numerous publications that conduct experiments using PLMs (such as BERT, BART) currently, a new subdirectory [efficient_plm/](efficient_plm/) is created to house papers that are applicable to PLMs but have yet to be verified for their effectiveness on LLMs (not implying that they are not suitable on LLM). 
 
+#### 💮 Contributing
+
+If you'd like to include your paper, or need to update any details such as conference information or code URLs, please feel free to submit a pull request. You can generate the required markdown format for each paper by filling in the information in `generate_item.py` and execute `python generate_item.py`. We warmly appreciate your contributions to this list. Alternatively, you can email me with the links to your paper and code, and I would add your paper to the list at my earliest convenience. 
+
 
 
 ## Paper from May 26, 2024 - Now (see Full List from May 22, 2023 [here](#full-list))
 
+#### Quick Link 
+  - [Network Pruning / Sparsity](#network-pruning--sparsity)
+  - [Knowledge Distillation](#knowledge-distillation)
+  - [Quantization](#quantization)
+  - [Inference Acceleration](#inference-acceleration)
+  - [Efficient MOE](#efficient_moe)
+  - [Efficient Architecture of LLM](#efficient-architecture-of-llm)
+  - [KV Cache Compression](#kv-cache-compression)
+  - [Text Compression](#text-compression)
+  - [Low-Rank Decomposition](#low-rank-decomposition)
+  - [Hardware / System](#hardwaresystem)
+  - [Tuning](#tuning)
+  - [Survey](#survey)
 
 #### Network Pruning / Sparsity
 | Title & Authors | Introduction | Links |
 |:--|  :----: | :---:|
+|[A Convex-optimization-based Layer-wise Post-training Pruner for Large Language Models](https://arxiv.org/abs/2408.03728) <br> Pengxiang Zhao, Hanyu Hu, Ping Li, Yi Zheng, Zhefeng Wang, Xiaoming Yuan |<img width="1002" alt="image" src="https://arxiv.org/html/2408.03728v1/x1.png"> |[Paper](https://arxiv.org/abs/2408.03728)|[//]: #08/08
+|[Pruning Large Language Models with Semi-Structural Adaptive Sparse Training](https://arxiv.org/abs/2407.20584) <br> Weiyu Huang, Guohao Jian, Yuezhou Hu, Jun Zhu, Jianfei Chen |<img width="1002" alt="image" src="https://arxiv.org/html/2407.20584v1/extracted/5756562/4.png"> |[Paper](https://arxiv.org/abs/2407.20584)|[//]: #08/08
+|[Greedy Output Approximation: Towards Efficient Structured Pruning for LLMs Without Retraining](https://arxiv.org/abs/2407.19126) <br> Jianwei Li, Yijun Dong, Qi Lei |<img width="1002" alt="image" src="https://arxiv.org/html/2407.19126v1/x2.png"> |[Paper](https://arxiv.org/abs/2407.19126)|[//]: #08/08
 |[![Star](https://img.shields.io/github/stars/NVlabs/Minitron.svg?style=social&label=Star)](https://github.com/NVlabs/Minitron)<br>[Compact Language Models via Pruning and Knowledge Distillation](https://arxiv.org/abs/2407.14679) <br> Saurav Muralidharan, Sharath Turuvekere Sreenivas, Raviraj Joshi, Marcin Chochowski, Mostofa Patwary, Mohammad Shoeybi, Bryan Catanzaro, Jan Kautz, Pavlo Molchanov |<img width="1002" alt="image" src="https://arxiv.org/html/2407.14679v1/x2.png"> |[Github](https://github.com/NVlabs/Minitron) <br> [Paper](https://arxiv.org/abs/2407.14679)|[//]: #07/29
 |[MINI-LLM: Memory-Efficient Structured Pruning for Large Language Models](https://arxiv.org/abs/2407.11681mini) <br> Hongrong Cheng, Miao Zhang, Javen Qinfeng Shi |<img width="1002" alt="image" src="figures/minillm.png"> |[Paper](https://arxiv.org/abs/2407.11681mini)|[//]: #07/21
 |[Reconstruct the Pruned Model without Any Retraining](https://arxiv.org/abs/2407.13331) <br> Pingjie Wang, Ziqing Fan, Shengchao Hu, Zhe Chen, Yanfeng Wang, Yu Wang |<img width="1002" alt="image" src="https://arxiv.org/html/2407.13331v1/x3.png"> |[Paper](https://arxiv.org/abs/2407.13331)|[//]: #07/21
@@ -76,6 +96,7 @@ In light of the numerous publications that conduct experiments using PLMs (such 
 #### Quantization
 | Title & Authors | Introduction | Links |
 |:--|  :----: | :---:|
+|[STBLLM: Breaking the 1-Bit Barrier with Structured Binary LLMs](https://arxiv.org/abs/2408.01803) <br> Peijie Dong, Lujun Li, Dayou Du, Yuhan Chen, Zhenheng Tang, Qiang Wang, Wei Xue, Wenhan Luo, Qifeng Liu, Yike Guo, Xiaowen Chu |<img width="1002" alt="image" src="https://arxiv.org/html/2408.01803v1/extracted/5772020/pic/basic_block.png"> |[Paper](https://arxiv.org/abs/2408.01803)|[//]: #08/08
 |[![Star](https://img.shields.io/github/stars/xiaocaigou/qbaraqahira.svg?style=social&label=Star)](https://github.com/xiaocaigou/qbaraqahira)<br>[Accurate and Efficient Fine-Tuning of Quantized Large Language Models Through Optimal Balance](https://arxiv.org/abs/2407.17029) <br> Ao Shen, Qiang Wang, Zhiquan Lai, Xionglve Li, Dongsheng Li |<img width="1002" alt="image" src="figures/Q-BaRA.png"> |[Github](https://github.com/xiaocaigou/qbaraqahira) <br> [Paper](https://arxiv.org/abs/2407.17029)|[//]: #07/26
 |[![Star](https://img.shields.io/github/stars/graphcore-research/jax-scalify.svg?style=social&label=Star)](https://github.com/graphcore-research/jax-scalify)[![Publish](https://img.shields.io/badge/Conference-ICML'24%20WANT-blue)]()<br>[Scalify: scale propagation for efficient low-precision LLM training](https://arxiv.org/abs/2407.17353) <br> Paul Balança, Sam Hosegood, Carlo Luschi, Andrew Fitzgibbon | |[Github](https://github.com/graphcore-research/jax-scalify) <br> [Paper](https://arxiv.org/abs/2407.17353)|[//]: #07/26
 |[![Star](https://img.shields.io/github/stars/OpenGVLab/EfficientQAT.svg?style=social&label=Star)](https://github.com/OpenGVLab/EfficientQAT)<br>[EfficientQAT: Efficient Quantization-Aware Training for Large Language Models](https://arxiv.org/abs/2407.11062) <br> Mengzhao Chen, Wenqi Shao, Peng Xu, Jiahao Wang, Peng Gao, Kaipeng Zhang, Yu Qiao, Ping Luo |<img width="1002" alt="image" src="https://arxiv.org/html/2407.11062v1/x5.png"> |[Github](https://github.com/OpenGVLab/EfficientQAT) <br> [Paper](https://arxiv.org/abs/2407.11062)|[//]: #07/21
@@ -114,6 +135,10 @@ In light of the numerous publications that conduct experiments using PLMs (such 
 #### Inference Acceleration
 | Title & Authors | Introduction | Links |
 |:--|  :----: | :---:|
+|[![Star](https://img.shields.io/github/stars/XiaoBin1992/clover.svg?style=social&label=Star)](https://github.com/XiaoBin1992/clover)<br>[Clover-2: Accurate Inference for Regressive Lightweight Speculative Decoding](https://arxiv.org/abs/2408.00264) <br> Bin Xiao, Lujun Gui, Lei Su, Weipeng Chen |<img width="1002" alt="image" src="https://github.com/XiaoBin1992/clover/raw/v1/figs/structure.png"> |[Github](https://github.com/XiaoBin1992/clover) <br> [Paper](https://arxiv.org/abs/2408.00264)|[//]: #08/08
+|[Accelerating Large Language Model Inference with Self-Supervised Early Exits](https://arxiv.org/abs/2407.21082) <br> Florian Valade | |[Paper](https://arxiv.org/abs/2407.21082)|[//]: #08/08
+|[An Efficient Inference Framework for Early-exit Large Language Models](https://arxiv.org/abs/2407.20272) <br> Ruijie Miao, Yihan Yan, Xinshuo Yao, Tong Yang ||[Paper](https://arxiv.org/abs/2407.20272)|[//]: #08/08
+|[![Publish](https://img.shields.io/badge/Conference-IVUS'24-blue)]()<br>[Inference acceleration for large language models using "stairs" assisted greedy generation](https://arxiv.org/abs/2407.19947) <br> Domas Grigaliūnas, Mantas Lukoševičius |<img width="1002" alt="image" src="https://arxiv.org/html/2407.19947v1/extracted/5761251/assist_inf_2.png"> |[Paper](https://arxiv.org/abs/2407.19947)|[//]: #08/08
 |[LazyLLM: Dynamic Token Pruning for Efficient Long Context LLM Inference](https://arxiv.org/abs/2407.14057) <br> Qichen Fu, Minsik Cho, Thomas Merth, Sachin Mehta, Mohammad Rastegari, Mahyar Najibi |<img width="1002" alt="image" src="https://arxiv.org/html/2407.14057v1/x1.png"> |[Paper](https://arxiv.org/abs/2407.14057)|[//]: #07/24
 |[Adaptive Draft-Verification for Efficient Large Language Model Decoding](https://arxiv.org/abs/2407.12021) <br> Xukun Liu, Bowen Lei, Ruqi Zhang, Dongkuan Xu |<img width="1002" alt="image" src="https://arxiv.org/html/2407.12021v1/x1.png"> |[Paper](https://arxiv.org/abs/2407.12021)|[//]: #07/21
 |[Multi-Token Joint Speculative Decoding for Accelerating Large Language Model Inference](https://arxiv.org/abs/2407.09722) <br> Zongyue Qin, Ziniu Hu, Zifan He, Neha Prakriya, Jason Cong, Yizhou Sun |<img width="1002" alt="image" src="https://arxiv.org/html/2407.09722v1/x1.png"> |[Paper](https://arxiv.org/abs/2407.09722)|[//]: #07/16
@@ -147,6 +172,7 @@ In light of the numerous publications that conduct experiments using PLMs (such 
 #### Efficient Architecture of LLM
 | Title & Authors | Introduction | Links |
 |:--|  :----: | :---:|
+|[SentenceVAE: Enable Next-sentence Prediction for Large Language Models with Faster Speed, Higher Accuracy and Longer Context](https://arxiv.org/abs/2408.00655) <br> Hongjun An, Yifan Chen, Zhe Sun, Xuelong Li |<img width="1002" alt="image" src="https://arxiv.org/html/2408.00655v4/x2.png"> |[Paper](https://arxiv.org/abs/2408.00655)|[//]: #08/08
 |[![Star](https://img.shields.io/github/stars/linxihui/dkernel.svg?style=social&label=Star)](https://github.com/linxihui/dkernel)<br>[Efficient LLM Training and Serving with Heterogeneous Context Sharding among Attention Heads](https://arxiv.org/abs/2407.17678) <br> Xihui Lin, Yunan Zhang, Suyu Ge, Barun Patra, Vishrav Chaudhary, Xia Song |<img width="1002" alt="image" src="https://github.com/linxihui/dkernel/raw/main/assets/localstride.png"> |[Github](https://github.com/linxihui/dkernel) <br> [Paper](https://arxiv.org/abs/2407.17678)|[//]: #07/26
 |[![Star](https://img.shields.io/github/stars/metacarbon/shareAtt.svg?style=social&label=Star)](https://github.com/metacarbon/shareAtt)<br>[Beyond KV Caching: Shared Attention for Efficient LLMs](https://arxiv.org/abs/2407.12866) <br> Bingli Liao, Danilo Vasconcellos Vargas |<img width="1002" alt="image" src="https://arxiv.org/html/2407.12866v1/x1.png"> |[Github](https://github.com/metacarbon/shareAtt) <br> [Paper](https://arxiv.org/abs/2407.12866)|[//]: #07/21
 |[![Star](https://img.shields.io/github/stars/itsnamgyu/block-transformer.svg?style=social&label=Star)](https://github.com/itsnamgyu/block-transformer)<br>[Block Transformer: Global-to-Local Language Modeling for Fast Inference](https://arxiv.org/abs/2406.02657) <br> Namgyu Ho, Sangmin Bae, Taehyeon Kim, Hyunjik Jo, Yireun Kim, Tal Schuster, Adam Fisch, James Thorne, Se-Young Yun |<img width="1002" alt="image" src="https://arxiv.org/html/2406.02657v1/x1.png"> |[Github](https://github.com/itsnamgyu/block-transformer) <br> [Paper](https://arxiv.org/abs/2406.02657)|[//]: #06/12
@@ -154,6 +180,10 @@ In light of the numerous publications that conduct experiments using PLMs (such 
 #### KV Cache Compression
 | Title & Authors | Introduction | Links |
 |:--|  :----: | :---:|
+|[Zero-Delay QKV Compression for Mitigating KV Cache and Network Bottlenecks in LLM Inference](https://arxiv.org/abs/2408.04107) <br> Zeyu Zhang,Haiying Shen |<img width="1002" alt="image" src="https://arxiv.org/html/2408.04107v1/x15.png"> |[Paper](https://arxiv.org/abs/2408.04107)|[//]: #08/09
+|[Finch: Prompt-guided Key-Value Cache Compression](https://arxiv.org/abs/2408.00167) <br> Giulio Corallo, Paolo Papotti |<img width="1002" alt="image" src="https://arxiv.org/html/2408.00167v1/extracted/5763688/assets/diagram_finch.png"> |[Paper](https://arxiv.org/abs/2408.00167)|[//]: #08/08
+|[![Star](https://img.shields.io/github/stars/shadowpa0327/Palu.svg?style=social&label=Star)](https://github.com/shadowpa0327/Palu)<br>[Palu: Compressing KV-Cache with Low-Rank Projection](https://arxiv.org/abs/2407.21118) <br> Chi-Chih Chang, Wei-Cheng Lin, Chien-Yu Lin, Chong-Yan Chen, Yu-Fang Hu, Pei-Shuo Wang, Ning-Chi Huang, Luis Ceze, Kai-Chiang Wu |<img width="1002" alt="image" src="https://github.com/shadowpa0327/Palu/blob/master/img/palu_idea.png"> |[Github](https://github.com/shadowpa0327/Palu) <br> [Paper](https://arxiv.org/abs/2407.21118)|[//]: #08/08
+|[ThinK: Thinner Key Cache by Query-Driven Pruning](https://arxiv.org/abs/2407.21018) <br> Yuhui Xu, Zhanming Jie, Hanze Dong, Lei Wang, Xudong Lu, Aojun Zhou, Amrita Saha, Caiming Xiong, Doyen Sahoo |<img width="1002" alt="image" src="https://arxiv.org/html/2407.21018v1/x1.png"> |[Paper](https://arxiv.org/abs/2407.21018)|[//]: #08/08
 |[RazorAttention: Efficient KV Cache Compression Through Retrieval Heads](https://arxiv.org/abs/2407.15891) <br> Hanlin Tang, Yang Lin, Jing Lin, Qingsen Han, Shikuan Hong, Yiwu Yao, Gongyi Wang |<img width="1002" alt="image" src="https://arxiv.org/html/2407.15891v1/x3.png"> |[Paper](https://arxiv.org/abs/2407.15891)|[//]: #07/24
 |[PQCache: Product Quantization-based KVCache for Long Context LLM Inference](https://arxiv.org/abs/2407.12820) <br> Hailin Zhang, Xiaodong Ji, Yilin Chen, Fangcheng Fu, Xupeng Miao, Xiaonan Nie, Weipeng Chen, Bin Cui |<img width="1002" alt="image" src="https://arxiv.org/html/2407.12820v1/extracted/5702744/Figures/transformer.png"> |[Paper](https://arxiv.org/abs/2407.12820)|[//]: #07/21
 |[![Star](https://img.shields.io/github/stars/recursal/GoldFinch-paper.svg?style=social&label=Star)](https://github.com/recursal/GoldFinch-paper)<br>[GoldFinch: High Performance RWKV/Transformer Hybrid with Linear Pre-Fill and Extreme KV-Cache Compression](https://arxiv.org/abs/2407.12077) <br> Daniel Goldstein, Fares Obeid, Eric Alcaide, Guangyu Song, Eugene Cheah |<img width="202" alt="image" src="https://github.com/recursal/GoldFinch-paper/raw/main/assets/architecture.png"> |[Github](https://github.com/recursal/GoldFinch-paper) <br> [Paper](https://arxiv.org/abs/2407.12077)|[//]: #07/21
@@ -167,6 +197,8 @@ In light of the numerous publications that conduct experiments using PLMs (such 
 #### Text Compression
 | Title & Authors | Introduction | Links |
 |:--|  :----: | :---:|
+|[![Star](https://img.shields.io/github/stars/ZongqianLi/500xCompressor.svg?style=social&label=Star)](https://github.com/ZongqianLi/500xCompressor)<br>[500xCompressor: Generalized Prompt Compression for Large Language Models](https://arxiv.org/abs/2408.03094) <br> Zongqian Li, Yixuan Su, Nigel Collier |<img width="1002" alt="image" src="https://arxiv.org/html/2408.03094v1/extracted/5776907/Figures/0-1.png"> |[Github](https://github.com/ZongqianLi/500xCompressor) <br> [Paper](https://arxiv.org/abs/2408.03094)|[//]: #08/08
+|[![Star](https://img.shields.io/github/stars/Wenshansilvia/attention_compressor.svg?style=social&label=Star)](https://github.com/Wenshansilvia/attention_compressor)<br>[QUITO: Accelerating Long-Context Reasoning through Query-Guided Context Compression](https://arxiv.org/abs/2408.00274) <br> Wenshan Wang, Yihang Wang, Yixing Fan, Huaming Liao, Jiafeng Guo |<img width="1002" alt="image" src="https://github.com/Wenshansilvia/attention_compressor/blob/main/assets/method.png"> |[Github](https://github.com/Wenshansilvia/attention_compressor) <br> [Paper](https://arxiv.org/abs/2408.00274)|[//]: #08/08
 |[![Publish](https://img.shields.io/badge/Conference-ICML'24%20EsFoMo-blue)]()<br>[Characterizing Prompt Compression Methods for Long Context Inference](https://arxiv.org/abs/2407.08892) <br> Siddharth Jha, Lutfi Eren Erdogan, Sehoon Kim, Kurt Keutzer, Amir Gholami |<img width="1002" alt="image" src="https://arxiv.org/html/2407.08892v1/x3.png"> |[Paper](https://arxiv.org/abs/2407.08892)|[//]: #07/16
 |[Entropy Law: The Story Behind Data Compression and LLM Performance](https://arxiv.org/abs/2407.06645) <br> Mingjia Yin, Chuhan Wu, Yufei Wang, Hao Wang, Wei Guo, Yasheng Wang, Yong Liu, Ruiming Tang, Defu Lian, Enhong Chen |<img width="1002" alt="image" src="https://arxiv.org/html/2407.06645v1/x1.png"> |[Paper](https://arxiv.org/abs/2407.06645)|[//]: #07/10
 |[PromptIntern: Saving Inference Costs by Internalizing Recurrent Prompt during Large Language Model Fine-tuning](https://arxiv.org/abs/2407.02211) <br> Jiaru Zou, Mengyu Zhou, Tao Li, Shi Han, Dongmei Zhang |<img width="1002" alt="image" src="https://arxiv.org/html/2407.02211v1/x2.png"> |[Paper](https://arxiv.org/abs/2407.02211)|[//]: #07/05
@@ -181,6 +213,7 @@ In light of the numerous publications that conduct experiments using PLMs (such 
 #### Hardware/System
 | Title & Authors | Introduction | Links |
 |:--|  :----: | :---:|
+|[Designing Efficient LLM Accelerators for Edge Devices](https://arxiv.org/abs/2408.00462) <br> Jude Haris, Rappy Saha, Wenhao Hu, José Cano |<img width="1002" alt="image" src="https://arxiv.org/html/2408.00462v1/extracted/5768368/files/SECDA_meth.png"> |[Paper](https://arxiv.org/abs/2408.00462)|[//]: #08/08
 |[PipeInfer: Accelerating LLM Inference using Asynchronous Pipelined Speculation](https://arxiv.org/abs/2407.11798) <br> Branden Butler, Sixing Yu, Arya Mazaheri, Ali Jannesari |<img width="1002" alt="image" src="https://arxiv.org/html/2407.11798v1/x1.png"> |[Paper](https://arxiv.org/abs/2407.11798)|[//]: #07/21
 |[![Star](https://img.shields.io/github/stars/Dao-AILab/flash-attention.svg?style=social&label=Star)](https://github.com/Dao-AILab/flash-attention)<br>[FlashAttention-3: Fast and Accurate Attention with Asynchrony and Low-precision](https://arxiv.org/abs/2407.08608) <br> Jay Shah, Ganesh Bikshandi, Ying Zhang, Vijay Thakkar, Pradeep Ramani, Tri Dao |<img width="1002" alt="image" src="figures/flashattention3.png"> |[Github](https://github.com/Dao-AILab/flash-attention) <br> [Paper](https://arxiv.org/abs/2407.08608) <br> [Blog](https://tridao.me/blog/2024/flash3/) |[//]: #07/12
 |[Preble: Efficient Distributed Prompt Scheduling for LLM Serving](https://arxiv.org/abs/2407.00023) <br> Vikranth Srivatsa, Zijian He, Reyna Abhyankar, Dongming Li, Yiying Zhang |<img width="1002" alt="image" src="figures/preble.png"> |[Paper](https://arxiv.org/abs/2407.00023)|[//]: #07/03
@@ -192,6 +225,7 @@ In light of the numerous publications that conduct experiments using PLMs (such 
 #### Tuning
 | Title & Authors | Introduction | Links |
 |:--|  :----: | :---:|
+|[Tensor Train Low-rank Approximation (TT-LoRA): Democratizing AI with Accelerated LLMs](https://arxiv.org/abs/2408.01008) <br> Afia Anjum, Maksim E. Eren, Ismael Boureima, Boian Alexandrov, Manish Bhattarai |<img width="1002" alt="image" src="https://arxiv.org/html/2408.01008v1/x7.png"> |[Paper](https://arxiv.org/abs/2408.01008)|[//]: #08/08
 |[Code Less, Align More: Efficient LLM Fine-tuning for Code Generation with Data Pruning](https://arxiv.org/abs/2407.05040) <br> Yun-Da Tsai, Mingjie Liu, Haoxing Ren |<img width="1002" alt="image" src="https://arxiv.org/html/2407.05040v1/x1.png"> |[Paper](https://arxiv.org/abs/2407.05040)|[//]: #07/10
 |[![Publish](https://img.shields.io/badge/Conference-ACL'24%20PrivateNLP-blue)]()<br>[PocketLLM: Enabling On-Device Fine-Tuning for Personalized LLMs](https://arxiv.org/abs/2407.01031) <br> Dan Peng, Zhihui Fu, Jun Wang ||[Paper](https://arxiv.org/abs/2407.01031)|[//]: #07/05
 |[![Star](https://img.shields.io/github/stars/LINs-lab/CapaBoost.svg?style=social&label=Star)](https://github.com/LINs-lab/CapaBoost)[![Publish](https://img.shields.io/badge/Conference-ICLR'24-blue)]()<br>[Increasing Model Capacity for Free: A Simple Strategy for Parameter Efficient Fine-tuning](https://arxiv.org/abs/2407.01320) <br> Haobo Song, Hao Zhao, Soumajit Majumder, Tao Lin |<img width="1002" alt="image" src="https://arxiv.org/html/2407.01320v1/x2.png"> |[Github](https://github.com/LINs-lab/CapaBoost) <br> [Paper](https://arxiv.org/abs/2407.01320)|[//]: #07/03
@@ -207,10 +241,6 @@ In light of the numerous publications that conduct experiments using PLMs (such 
 |[Survey on Knowledge Distillation for Large Language Models: Methods, Evaluation, and Application](https://arxiv.org/abs/2407.01885) <br> Chuanpeng Yang, Wang Lu, Yao Zhu, Yidong Wang, Qian Chen, Chenlong Gao, Bingjie Yan, Yiqiang Chen |<img width="1002" alt="image" src="https://arxiv.org/html/2407.01885v1/extracted/5702255/1.png"> |[Paper](https://arxiv.org/abs/2407.01885)|[//]: #07/05
 |[Memory Is All You Need: An Overview of Compute-in-Memory Architectures for Accelerating Large Language Model Inference](https://arxiv.org/abs/2406.08413) <br> Christopher Wolters, Xiaoxuan Yang, Ulf Schlichtmann, Toyotaro Suzumura |<img width="1002" alt="image" src="figures/CIM.png"> |[Paper](https://arxiv.org/abs/2406.08413)|[//]: #06/18
  
-#### 💮 Contributing
-
-If you'd like to include your paper, or need to update any details such as conference information or code URLs, please feel free to submit a pull request. You can generate the required markdown format for each paper by filling in the information in `generate_item.py` and execute `python generate_item.py`. We warmly appreciate your contributions to this list. Alternatively, you can email me with the links to your paper and code, and I would add your paper to the list at my earliest convenience. 
-
 
 
 
